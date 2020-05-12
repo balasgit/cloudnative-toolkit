@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 echo 'Building new version of Tile'
 
-export GIT_REPO="git@github.com:ibm-garage-cloud/ibm-garage-iteration-zero.git"
+#export GIT_REPO="git@github.com:ibm-garage-cloud/ibm-garage-iteration-zero.git"
+export GIT_REPO="git@github.com:seansund/ibm-garage-iteration-zero.git"
 export WORK_DIR="clone"
-export BRANCH="master"
+export BRANCH="private-catalog"
 
 rm -rfd ${WORK_DIR}
 
-git clone ${GIT_REPO} ${WORK_DIR}
+git clone ${GIT_REPO} -b ${BRANCH} ${WORK_DIR}
 
 if [[ "${BRANCH}" != "master" ]]; then
     PRE_RELEASE="--preRelease=${BRANCH}"
