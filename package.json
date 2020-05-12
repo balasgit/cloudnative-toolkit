@@ -1,0 +1,24 @@
+{
+  "name": "cloudnative-toolkit",
+  "version": "1.0.0",
+  "org": "IBM",
+  "description": "Cloud Native Toolkit IBM Cloud Private Catalog Tile",
+  "scripts": {
+    "clean": "rm -rf workspace",
+    "release": "release-it"
+  },
+  "author": "Matthew Perrins",
+  "license": "Apache2",
+  "devDependencies": {
+    "release-it": "^13.5.8"
+  },
+  "release-it": {
+    "github": {
+      "release": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibm-garage-cloud/template-node-typescript.git"
+  }
+}
