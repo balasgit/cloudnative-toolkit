@@ -36,6 +36,7 @@ echo "Copying from ${SRC_DIR} to ${WORKSPACE_DIR}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}/variables.tf" "${WORKSPACE_DIR}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}"/stage*.tf "${WORKSPACE_DIR}"
 cp "${SRC_DIR}"/scripts/* "${WORKSPACE_DIR}"
+cp docs/README.MD ${WORKSPACE_DIR}
 
 release-it patch ${PRE_RELEASE} --ci --no-npm --no-git.push --no-git.requireCleanWorkingDir                       --verbose                       -VV
 
