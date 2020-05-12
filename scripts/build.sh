@@ -38,6 +38,8 @@ cp "${SRC_DIR}/${STAGES_DIRECTORY}"/stage*.tf "${WORKSPACE_DIR}"
 cp "${SRC_DIR}"/scripts/* "${WORKSPACE_DIR}"
 cp docs/README.MD ${WORKSPACE_DIR}
 
+rm -rf ${WORK_DIR}
+
 git add .
 git commit -m "Latest Iteration Zero Terraform stages"
 
