@@ -9,10 +9,8 @@ rm -rfd ${WORK_DIR}
 
 git clone ${GIT_REPO} ${WORK_DIR}
 
-mkdir -p ~/.npm
-npm config set prefix ~/.npm
-export PATH=$PATH:~/.npm/bin
-npm i -g release-it
+#install dependencies
+npm i
 
 if [[ "${BRANCH}" != "master" ]]; then
     PRE_RELEASE="--preRelease=${BRANCH}"
