@@ -9,9 +9,6 @@ rm -rfd ${WORK_DIR}
 
 git clone ${GIT_REPO} ${WORK_DIR}
 
-#install dependencies
-npm i
-
 if [[ "${BRANCH}" != "master" ]]; then
     PRE_RELEASE="--preRelease=${BRANCH}"
 fi
@@ -38,11 +35,4 @@ cp docs/README.MD ${WORKSPACE_DIR}
 
 rm -rf ${WORK_DIR}
 
-git add .
-git commit -m "Latest Iteration Zero Terraform stages"
-
-release-it patch ${PRE_RELEASE} --ci --no-npm --no-git.push --no-git.requireCleanWorkingDir                       --verbose                       -VV
-
-git push --follow-tags -v
-
-echo 'Release complete .......'
+echo 'Build complete .......'
