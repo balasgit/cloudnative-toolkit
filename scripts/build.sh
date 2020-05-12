@@ -8,7 +8,7 @@ export BRANCH="private-catalog"
 
 rm -rfd ${WORK_DIR}
 
-git clone ${GIT_REPO} -b ${BRANCH} ${WORK_DIR}
+git clone -b ${BRANCH} ${GIT_REPO}  ${WORK_DIR}
 
 if [[ "${BRANCH}" != "master" ]]; then
     PRE_RELEASE="--preRelease=${BRANCH}"
@@ -34,6 +34,6 @@ cp "${SRC_DIR}/${STAGES_DIRECTORY}"/stage*.tf "${WORKSPACE_DIR}"
 cp "${SRC_DIR}"/scripts/* "${WORKSPACE_DIR}"
 cp docs/README.MD ${WORKSPACE_DIR}
 
-rm -rf ${WORK_DIR}
+#rm -rf ${WORK_DIR}
 
 echo 'Build complete .......'
