@@ -1,5 +1,6 @@
 module "dev_cluster" {
   source = "github.com/seansund/garage-terraform-modules.git//cloud-managed/cluster/ibmcloud?ref=private-catalog"
+
   resource_group_name     = var.resource_group_name
   cluster_name            = var.cluster_name
   private_vlan_id         = var.private_vlan_id
