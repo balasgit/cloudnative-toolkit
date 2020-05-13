@@ -2,7 +2,7 @@
 echo 'Building new version of Tile'
 
 #export GIT_REPO="git@github.com:ibm-garage-cloud/ibm-garage-iteration-zero.git"
-export GIT_REPO="git@github.com:seansund/ibm-garage-iteration-zero.git"
+export GIT_REPO="git@github.com:mjperrins/ibm-garage-iteration-zero.git"
 export WORK_DIR="clone"
 export BRANCH="private-catalog"
 
