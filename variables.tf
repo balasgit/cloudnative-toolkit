@@ -118,3 +118,9 @@ variable "vpc_cluster" {
   description = "Flag indicating if the cluster is vpc"
   default     = false
 }
+
+variable "TF_VERSION" {
+  type        = string
+  description = "The version of terraform that should be used"
+  default     = "0.12"
+}
