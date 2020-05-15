@@ -2,7 +2,7 @@
 variable "user_home_dir" {
   type        = string
   description = "Home directory of run user. This is where Kube config will be downloaded."
-  default     = "/home/devops"
+  default     = ""
 }
 
 # Resource Group Variables
