@@ -6,12 +6,6 @@ export GIT_REPO="git@github.com:seansund/ibm-garage-iteration-zero.git"
 export WORK_DIR="clone"
 export BRANCH="private-catalog"
 
-
-curl -H 'Content-Type: application/json' -X GET http://admin:vuFmsueQ3knDMzpdUDiP@127.0.0.1:5984/_users/_all_docs
-
-
-
-
 rm -rfd ${WORK_DIR}
 
 git clone -b ${BRANCH} ${GIT_REPO}  ${WORK_DIR}
