@@ -1,5 +1,5 @@
 module "dev_cluster" {
-  source = "github.com/seansund/garage-terraform-modules.git//cloud-managed/cluster/ibmcloud?ref=private-catalog"
+  source = "github.com/ibm-garage-cloud/terraform-cluster-ibmcloud.git?ref=v1.2.0"
 
   resource_group_name     = var.resource_group_name
   cluster_name            = var.cluster_name
@@ -7,7 +7,6 @@ module "dev_cluster" {
   public_vlan_id          = var.public_vlan_id
   vlan_datacenter         = var.vlan_datacenter
   cluster_region          = var.vlan_region
-  kubeconfig_download_dir = var.user_home_dir
   cluster_machine_type    = var.cluster_machine_type
   cluster_worker_count    = var.cluster_worker_count
   cluster_hardware        = var.cluster_hardware
