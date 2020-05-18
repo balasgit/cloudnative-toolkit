@@ -34,6 +34,12 @@ cp "${SRC_DIR}/${STAGES_DIRECTORY}"/stage*.tf "${WORKSPACE_DIR}"
 cp "${SRC_DIR}"/scripts/* "${WORKSPACE_DIR}"
 cp docs/README.MD ${WORKSPACE_DIR}
 
-#rm -rf ${WORK_DIR}
+# Move some stages to an unused folder
+rm -rf unused-stages
+mkdir unused-stages
+mv stage3-logdna.tf unused-stages
+mv stage3-sysdig.tf unused-stages
+
+rm -rf ${WORK_DIR}
 
 echo 'Build complete .......'
