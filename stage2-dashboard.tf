@@ -1,5 +1,5 @@
 module "dev_tools_dashboard_release" {
-  source = "github.com/seansund/garage-terraform-modules.git//generic/tools/developerdashboard_release?ref=private-catalog"
+  source = "github.com/ibm-garage-cloud/garage-tools-dashboard.git?ref=v1.1.1"
 
   cluster_ingress_hostname = module.dev_cluster.ingress_hostname
   cluster_config_file      = module.dev_cluster.config_file_path
