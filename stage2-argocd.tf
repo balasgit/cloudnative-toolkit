@@ -1,9 +1,11 @@
-module "dev_tools_argocd_release" {
-  source = "github.com/ibm-garage-cloud/garage-terraform-modules.git//generic/tools/argocd_release?ref=v2.3.0"
+module "dev_tools_argocd" {
+  source = "github.com/ibm-garage-cloud/terraform-tools-argocd.git?ref=v2.0.0"
 
-  cluster_ingress_hostname = module.dev_cluster.ingress_hostname
-  cluster_config_file      = module.dev_cluster.config_file_path
-  cluster_type             = var.cluster_type
-  releases_namespace       = module.dev_cluster_namespaces.tools_namespace_name
-  tls_secret_name          = module.dev_cluster.tls_secret_name
+  cluster_config_file = module.dev_cluster.config_file_path
+  cluster_type        = module.dev_cluster.type_code
+  olm_namespace       = module.dev_software_olm.olm_namespace
+  operator_namespace  = module.dev_software_olm.target_namespace
+  app_namespace       = module.dev_cluster_namespaces.tools_namespace_name
+  ingress_subdomain   = module.dev_cluster.ingress_hostname
+  name                = "argocd"
 }
