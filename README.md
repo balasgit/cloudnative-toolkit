@@ -5,7 +5,7 @@
 This git repository is a dirivative of the **Interation Zero** project from
  the **IBM Garage Cloud Native Toolkit**. It has been created to make the
   installation of the Toolkit CNCF DevOps tools very easy from IBM Cloud
-   Schematics services. The tools offering a simple approach to CI/CD with
+   Schematics services. The tools offer a simple approach to CI/CD with
     IBM Manage clusters OpenShift and Kubernetes. 
    
 You can find out more information about the toolkit and the iteration zero
@@ -108,10 +108,9 @@ To get started open the Developer Dashboard or navigate to the tools using the O
 
 ### Post Installation steps
 
-- Two of the default tools that were installed **Artifactory** and **ArgoCD
-** require some post installation configuration.
-- Complete these steps documented here for [Artifactory Configuration](cloud-native-setup/artifactory-setup)
-- Complete these steps documented here for [ArgoCD Configuration](cloud-native-setup/argo-setup)
+- Two of the default tools that were installed **Artifactory** and **ArgoCD** require some post installation configuration.
+- Complete these steps documented here for [Artifactory Configuration](https://cloudnativetoolkit.dev/admin/artifactory-setup)
+- Complete these steps documented here for [ArgoCD Configuration](https://cloudnativetoolkit.dev/admin/argocd-setup)
 
 ### Possible issues
 
