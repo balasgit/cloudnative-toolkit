@@ -114,9 +114,9 @@ variable "name_prefix" {
 }
 
 variable "vpc_cluster" {
-  type        = bool
+  type        = string
   description = "Flag indicating if the cluster is vpc"
-  default     = false
+  default     = "false"
 }
 
 variable "TF_VERSION" {

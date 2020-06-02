@@ -14,5 +14,5 @@ module "dev_cluster" {
   cluster_exists          = var.cluster_exists
   ibmcloud_api_key        = var.ibmcloud_api_key
   name_prefix             = var.name_prefix
-  is_vpc                  = var.vpc_cluster
+  is_vpc                  = var.vpc_cluster == "true"
 }
