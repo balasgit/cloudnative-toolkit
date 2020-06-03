@@ -117,7 +117,6 @@ variable "vpc_cluster" {
   type        = string
   description = "Flag indicating if the cluster is vpc"
   default     = "false"
-
 }
 
 variable "TF_VERSION" {
