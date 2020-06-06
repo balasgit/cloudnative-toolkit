@@ -5,7 +5,7 @@ npm i
 
 git add .
 
-release-it patch ${PRE_RELEASE} --ci --no-npm --no-git.push --no-git.requireCleanWorkingDir --verbose -VV
+release-it --ci --no-npm --no-git.push --no-git.requireCleanWorkingDir --verbose -VV
 
 VERSION=$(eval git describe --tags --abbrev=0)
 
