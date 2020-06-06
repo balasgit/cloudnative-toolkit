@@ -9,7 +9,7 @@ echo "IBM Cloud Private Catalog Offering Creation..."
 # Credentials from IBM Cloud add API_KEY and USERNAME from Cloudant
 API_KEY=$1
 CATALOG_NAME=$2
-VERSION=0.0.57
+VERSION=0.0.58
 
 # input validation
 if [ -z "${API_KEY}" ]; then
