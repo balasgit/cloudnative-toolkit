@@ -2,7 +2,7 @@
 variable "user_home_dir" {
   type        = string
   description = "Home directory of run user. This is where Kube config will be downloaded."
-  default     = ""
+  default     = "/home/devops"
 }
 
 # Resource Group Variables
@@ -113,14 +113,38 @@ variable "name_prefix" {
   default     = ""
 }
 
+variable "TF_VERSION" {
+  type = string
+  description = "The version of terraform that should be used"
+  default = "0.12"
+}
+
 variable "vpc_cluster" {
   type        = string
   description = "Flag indicating if the cluster is vpc"
   default     = "false"
 }
 
-variable "TF_VERSION" {
+variable "logdna_exists" {
   type        = string
-  description = "The version of terraform that should be used"
-  default     = "0.12"
+  description = "Flag indicating that the logdna instance already exists"
+  default     = "false"
+}
+
+variable "logdna_name" {
+  type        = string
+  description = "The name of the logdna instance. This is particularly used for an existing logdna instance. If not provided the name will be derived from the name_prefix/resource_group"
+  default     = ""
+}
+
+variable "sysdig_exists" {
+  type        = string
+  description = "Flag indicating that the sysdig instance already exists"
+  default     = "false"
+}
+
+variable "sysdig_name" {
+  type        = string
+  description = "The name of the sysdig instance. This is particularly used for an existing sysdig instance. If not provided the name will be derived from the name_prefix/resource_group"
+  default     = ""
 }
