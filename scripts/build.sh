@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-echo 'Building new version of Tile'
+echo 'Building new version of Tile from Iteration Zero Terraform Modules'
 
-#export GIT_REPO="git@github.com:ibm-garage-cloud/ibm-garage-iteration-zero.git"
-export GIT_REPO="git@github.com:seansund/ibm-garage-iteration-zero.git"
+export GIT_REPO="git@github.com:ibm-garage-cloud/ibm-garage-iteration-zero.git"
 export WORK_DIR="clone"
-export BRANCH="private-catalog"
+export BRANCH="master"
 
 rm -rfd ${WORK_DIR}
 
@@ -33,6 +32,7 @@ cp "${SRC_DIR}/${STAGES_DIRECTORY}/variables.tf" "${WORKSPACE_DIR}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}"/stage*.tf "${WORKSPACE_DIR}"
 cp "${SRC_DIR}"/scripts/* "${WORKSPACE_DIR}"
 cp docs/README.MD ${WORKSPACE_DIR}
+
 
 # Move some stages to an unused folder
 rm -rf unused-stages
