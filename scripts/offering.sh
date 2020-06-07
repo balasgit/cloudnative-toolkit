@@ -1,10 +1,14 @@
 #!/bin/sh
+###################################################################################
 # Register IBM Cloud Private Catalog Offering within an Existing Catalog
 # If the Catalog does not exist it will Create One with the name provided
+#
 # Author : Matthew Perrins
 # email  : mjperrin@us.ibm.com
-
-echo "IBM Cloud Private Catalog Offering Creation..."
+#
+###################################################################################
+echo "IBM Cloud Private Catalog Offering Creation!"
+echo "This will create a CNCF DevOps Cloud Native Toolkit Tile in an existing Catalog"
 
 # Credentials from IBM Cloud add API_KEY and USERNAME from Cloudant
 API_KEY=$1
@@ -48,9 +52,7 @@ HOST="https://cm.globalcatalog.cloud.ibm.com/api/v1-beta"
 # Get List of Catalogs and match to Catalog name
 # If the catalog does not exist create it and use that GUID for the Offering Registration
 echo "Retrieving Catalogs"
-echo "  \c"
 CATALOGS=$(eval ${ACURL} -X GET "${HOST}/catalogs")
-
 CATALOG_ID=
 
 # Lets find the Catalog Label and match it to the one we have passed in
@@ -68,18 +70,17 @@ for row in $(echo "${CATALOGS}" | jq -r '.resources[] | @base64'); do
 
 done
 
-# Lets check if we have a live Catalog
+# Lets check if we have a Catalog
 if [ -z "${CATALOG_ID}" ]; then
 
-  # Create the Catalog
-  echo "Create the Catalog at this point "
-
+  echo "Catalog Does not Exist, pease create on with the User Experience "
+  exit
 fi
 
 # Define the Offering and relationship to the Catalog
 OFFERING=$(cat offering.json | sed "s/#CATALOG_ID/${CATALOG_ID}/g" | sed "s/#VERSION/${VERSION}/g" > offering-new.json )
 
-echo "Creating Offering in Catalog ${CATALOG_NAME}"
+echo "Creating Offering in Catalog ${CATALOG_ID}"
 CATALOGS=$(eval ${ACURL} -location -request POST "${HOST}/catalogs/${CATALOG_ID}/offerings" -H 'Content-Type: application/json' --data "@offering-new.json")
 
 echo "Offering Registration Complete ...!"

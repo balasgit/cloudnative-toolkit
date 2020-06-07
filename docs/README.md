@@ -1,12 +1,13 @@
 # Cloud Native Toolkit 
 
-## Install CNCF DevOps Tools using Schematics or IBM Private Catalogs
+## Install CNCF Cloud-Native DevOps Tools using IBM Private Catalogs or IBM Schematics
 
 This git repository is a dirivative of the **Interation Zero** project from
  the **IBM Garage Cloud Native Toolkit**. It has been created to make the
-  installation of the Toolkit CNCF DevOps tools very easy from IBM Cloud
-   using either Private Catalog Tile or the Schematics services. The tools
-    offer CNCF approach to CI/CD with IBM Manage clusters OpenShift
+  installation of the Toolkit CNCF Cloud-Native DevOps tools very
+   easy from IBM Cloud using either a Private Catalog Tile or the IBM
+    Schematics services. The
+    tools offer CNCF approach to CI/CD with IBM Manage clusters OpenShift
      and Kubernetes. 
    
 You can find out more information about the toolkit and the iteration zero
@@ -22,7 +23,8 @@ Follow the instructions below to install these commond cloud native tools
 ### Prerequisites
 
 The Developer Tools are installed by an cloud account
- administrator, who will run the IasC to create the environment in an IBM Cloud account. The scripts will run as the environment administrator's user. These instructions explain how to configure and run the Terraform (IasC) scripts to create the <Globals name="env" />.
+ administrator, who will run the IasC to create the environment in an IBM Cloud account. 
+ The scripts will run as the environment administrator's user. These instructions explain how to configure and run the Terraform (IasC) scripts to create the <Globals name="env" />.
 
 **Note**: The Terraform scripts will clean up the cluster to remove any existing installation that may have been previously been installed.
 
@@ -32,19 +34,29 @@ Optional: To help confirm that the scripts will have the permissions they'll req
 - [Create a cluster](https://cloud.ibm.com/kubernetes/catalog/cluster/create) -- Make it single-zone, and specify the proper data center and resource group
 - Create a namespace in the image registry
 
-As long as the user can create these resources successfully the schematics terraform script will be able to apply its state to the cluster.
+As long as the user can create these resources successfully the terraform script will be able to apply its state to the cluster.
 
 ### Setup Private Catalog Offering
 
 One of the features of the IBM Cloud Catalog is support for private catalog
- tiles. These can contain custom Terraform definitions than can accelerate an
+ tiles. These can contain custom Terraform definitions that can accelerate an
   SRE teams in the execution of common and repetative tasks. The CNCF DevOps
    tools installation can be configured as a private catalog tile. This is
-    the recommend approach for using this asset multiple times. When you want to transition a default kubernetes cluster into a cluster used cloud native development. 
+    the recommend approach for using this asset multiple times. This asset
+     enables the easy transition of a default cluster into a cluster that
+      support Cloud-Native CI/CD development tools.
+      
+- Frist step is to create a Catalog, Click **Manage->Catalogs**
+- Click on **Create Catalog** , provide a name for example `Team Catalog`
+- Click **Update** to change the default resource group for the Catalog 
+- Click **Create** to complete the Catalog Creation
     
-- First step is to run the following script to register the Catalog and the
- Offering tile. You will need an IBM Cloud API Key
+- Next step is to run the following script to register Cloud-Native Toolkit
+ tile into the Catalog as an offering. You will need an IBM Cloud API Key
  
+- Clone this repository to the Cloud Shell or you local workstation
+- Run the `offering.sh` scripts passing in the API Key and the name of the
+ Catalog that you created 
  ```bash
 git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
 ../offering.sh {API_KEY} "Team Catalog"
@@ -52,7 +64,8 @@ git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
 - Once complete navigate to the new Catalog and click on the **Private** menu
  on the left you can select the catalog you have created `Team Catalog`
 - Select the **Cloud Native Toolkit** tile
-- Complete the variables     
+- Enter values for the varibles list , these can be customized depending
+ on the type of cluster and if its in classic or VPC
 
     | **Variable**   | **Description**  | **eg. Value**  |
     |---|---|---|
@@ -63,6 +76,19 @@ git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
     -iks-117-vpc` |
     |  `cluster_exists`     |  Does the cluster exist already | `true`  |
     |  `vpc_cluster`        | Is the cluster created in VPC  | `true`  |
+
+- Input the Environment variables
+
+    - Set them based on the existing cluster:
+    - `resource_group_name` -- The existing cluster's resource group
+    - `cluster_exists` -- Set to `true` for an existing cluster
+    - `cluster_type` -- Specify the existing cluster's type
+        - **kubernetes** -- Kubernetes
+        - **openshift** -- OpenShift v3
+        - **ocp3** -- OpenShift v3
+        - **ocp4** -- OpenShift v4
+    - `cluster_name` -- The existing cluster's name
+    - `vpc_cluster` -- true of false if the cluster is inside a VPC
 
 - Accept the License which is **Apache 2** licnese
 - Click **Install**
@@ -79,12 +105,11 @@ git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
 - Complete these steps documented here for [Artifactory Configuration](https://cloudnativetoolkit.dev/admin/artifactory-setup)
 - Complete these steps documented here for [ArgoCD Configuration](https://cloudnativetoolkit.dev/admin/argocd-setup)
 
-### Getting Starter 
+### Getting Started
 
 - Read the [Developer Guide](https://cloudnativetoolkit.dev/getting-started
 /deploy-app) to get more information about using the Tools now they are
  running in your cluster
-
 
 ### Setup Schematics
 

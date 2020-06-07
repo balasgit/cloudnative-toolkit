@@ -5,11 +5,11 @@ npm i
 
 git add .
 
+# Release the Version
 release-it --ci --no-npm --no-git.push --no-git.requireCleanWorkingDir --verbose -VV
 
-VERSION=$(eval git describe --tags --abbrev=0)
-
 # Setup Offering Registration Command with current version included
+VERSION=$(eval git describe --tags --abbrev=0)
 cat scripts/offering.sh | sed "s/VERSION=/VERSION=${VERSION}/g" > ./offering.sh
 cp scripts/offering.json .
 chmod +x offering.sh
