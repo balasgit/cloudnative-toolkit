@@ -13,7 +13,7 @@ echo "This will create a CNCF DevOps Cloud Native Toolkit Tile in an existing Ca
 # Credentials from IBM Cloud add API_KEY and USERNAME from Cloudant
 API_KEY=$1
 CATALOG_NAME=$2
-VERSION=1.0.4
+VERSION=1.0.5
 
 # input validation
 if [ -z "${API_KEY}" ]; then
