@@ -84,6 +84,9 @@
             "provider_name": "free",
             "provider_id": "free"
           },
+          "install": {
+            "instructions": "N/A"
+          },
           "licenses": [
             {
               "name": "LICENSE",
@@ -98,5 +101,8 @@
   ],
   "catalog_id": "#CATALOG_ID",
   "hidden": false,
-  "provider": "IBM"
+  "provider": "IBM",
+  "repo_info": {
+    "type": "public_git"
+  }
 }
