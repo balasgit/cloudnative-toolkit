@@ -10,7 +10,7 @@
 echo "IBM Cloud Private Catalog Offering Creation!"
 echo "This will create a CNCF DevOps Cloud Native Toolkit Tile in an existing Catalog"
 
-# Credentials from IBM Cloud add API_KEY and USERNAME from Cloudant
+# the API_KEY and Catalog Name are required to run this script
 API_KEY=$1
 CATALOG_NAME=$2
 VERSION=
@@ -27,7 +27,7 @@ if [ -z "${CATALOG_NAME}" ]; then
     exit
 fi
 
-# input validation
+# input validation, Version is provided when the packaged release of this repository is created
 if [ -z "${VERSION}" ]; then
     echo "Please provide the version to register as third paramter"
     exit
