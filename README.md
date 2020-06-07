@@ -77,8 +77,7 @@ git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
     | `ibmcloud_api_key` | The API key from IBM Cloud Console that support service creation access writes  | `{guid API key from Console}`  |
     |  `resource_group_name` | The name of the resource group where the cluster is created  | `dev-team-one`  |
     |  `cluster_type`       |  The name of the IKS cluster |  `kubernetes` or `ocp4` |
-    |  `cluster_name`       |  The name of the IKS cluster |  `dev-team-one
-    -iks-117-vpc` |
+    |  `cluster_name`       |  The name of the IKS cluster |  `dev-team-one-iks-117-vpc` |
     |  `cluster_exists`     |  Does the cluster exist already | `true`  |
     |  `vpc_cluster`        | Is the cluster created in VPC  | `true`  |
 
