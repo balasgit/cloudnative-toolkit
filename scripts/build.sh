@@ -32,7 +32,7 @@ cp "${SRC_DIR}/${STAGES_DIRECTORY}/variables.tf" "${WORKSPACE_DIR}"
 cp "${SRC_DIR}/${STAGES_DIRECTORY}"/stage*.tf "${WORKSPACE_DIR}"
 cp "${SRC_DIR}"/scripts/* "${WORKSPACE_DIR}"
 cp docs/README.MD ${WORKSPACE_DIR}
-
+cp docs/README ${WORKSPACE_DIR}
 
 # Move some stages to an unused folder
 rm -rf unused-stages
