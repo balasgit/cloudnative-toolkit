@@ -36,7 +36,7 @@ Optional: To help confirm that the scripts will have the permissions they'll req
 
 As long as the user can create these resources successfully the terraform script will be able to apply its state to the cluster.
 
-### Setup Private Catalog Offering
+### Config Private Catalog Offering
 
 One of the features of the IBM Cloud Catalog is support for private catalog
  tiles. These can contain custom Terraform definitions that can accelerate an
@@ -61,8 +61,13 @@ One of the features of the IBM Cloud Catalog is support for private catalog
 git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
 ../offering.sh {API_KEY} "Team Catalog"
 ```
-- Once complete navigate to the new Catalog and click on the **Private** menu
- on the left you can select the catalog you have created `Team Catalog`
+
+## Install Toolkit into Cluster using Private Catalog Tile
+
+- Once you have completed the Offering Tile configuration, navigate to the new
+ Catalog. You can do this from the IBM Cloud Console select you Catalog ie
+ . `Team Catalog`and click on the **Private** menu on the on the left you can
+  select the catalog you have created `Team Catalog`
 - Select the **Cloud Native Toolkit** tile
 - Enter values for the varibles list , these can be customized depending
  on the type of cluster and if its in classic or VPC
