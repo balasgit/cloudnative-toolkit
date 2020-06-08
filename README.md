@@ -2,7 +2,7 @@
 
 ## Install CNCF Cloud-Native DevOps Tools using IBM Private Catalogs or IBM Schematics
 
-This git repository is a dirivative of the **Interation Zero** project from
+This git repository is a derivative of the **Interation Zero** project from
  the **IBM Garage Cloud Native Toolkit**. It has been created to make the
   installation of the Toolkit CNCF Cloud-Native DevOps tools very
    easy from IBM Cloud using either a Private Catalog Tile or the IBM
@@ -16,7 +16,7 @@ You can find out more information about the toolkit and the iteration zero
 - [IBM Garage Cloud Native Toolkit](https://cloudnativetoolkit.dev/)
 - [Toolkit Iteration Zero Terraform](https://github.com/ibm-garage-cloud/ibm-garage-iteration-zero)
 
-Follow the instructions below to install these commond cloud native tools
+Follow the instructions below to install these common cloud native tools
  into manager cluster on IBM Cloud. This can be either OpenShift or
   Kubernetes
   
@@ -44,7 +44,7 @@ One of the features of the IBM Cloud Catalog is support for private catalog
    tools installation can be configured as a private catalog tile. This is
     the recommend approach for using this asset multiple times. This asset
      enables the easy transition of a default cluster into a cluster that
-      support Cloud-Native CI/CD development tools.
+      supports Cloud-Native CI/CD development tools.
       
 - Frist step is to create a Catalog, Click **Manage->Catalogs**
 - Click on **Create Catalog** , provide a name for example `Team Catalog`
