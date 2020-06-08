@@ -2,7 +2,7 @@
 
 ## Install CNCF Cloud-Native DevOps Tools using IBM Private Catalogs or IBM Schematics
 
-This git repository is a derivative of the **Interation Zero** project from
+This git repository is a derivative of the **Iteration Zero** project from
  the **IBM Garage Cloud Native Toolkit**. It has been created to make the
   installation of the Toolkit CNCF Cloud-Native DevOps tools very
    easy from IBM Cloud using either a Private Catalog Tile or the IBM
@@ -40,13 +40,13 @@ As long as the user can create these resources successfully the terraform script
 
 One of the features of the IBM Cloud Catalog is support for private catalog
  tiles. These can contain custom Terraform definitions that can accelerate an
-  SRE teams in the execution of common and repetative tasks. The CNCF DevOps
+  SRE teams in the execution of common and repetitive tasks. The CNCF DevOps
    tools installation can be configured as a private catalog tile. This is
     the recommend approach for using this asset multiple times. This asset
      enables the easy transition of a default cluster into a cluster that
       supports Cloud-Native CI/CD development tools.
       
-- Frist step is to create a Catalog, Click **Manage->Catalogs**
+- First step is to create a Catalog, Click **Manage->Catalogs**
 - Click on **Create Catalog** , provide a name for example `Team Catalog`
 - Click **Update** to change the default resource group for the Catalog 
 - Click **Create** to complete the Catalog Creation
@@ -69,7 +69,7 @@ git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
  . `Team Catalog`and click on the **Private** menu on the on the left you can
   select the catalog you have created `Team Catalog`
 - Select the **Cloud Native Toolkit** tile
-- Enter values for the varibles list , these can be customized depending
+- Enter values for the variables list , these can be customized depending
  on the type of cluster and if its in classic or VPC
 
     | **Variable**   | **Description**  | **eg. Value**  |
@@ -94,7 +94,7 @@ git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
     - `cluster_name` -- The existing cluster's name
     - `vpc_cluster` -- true of false if the cluster is inside a VPC
 
-- Accept the License which is **Apache 2** licnese
+- Accept the License which is **Apache 2** license
 - Click **Install**
 
 - This will kick off the installation of the CNCF Cloud-Native DevOps tools
@@ -191,13 +191,4 @@ To get started open the Developer Dashboard or navigate to the tools using the O
 
 ### Possible issues
 
-If you find that that the Terraform provisioning has failed, try deleting the workshpace and configuring it again
-
-
-### Summnary
-
-
-
-
-
-
+If you find that that the Terraform provisioning has failed, try deleting the workspace and configuring it again
