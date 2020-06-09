@@ -26,8 +26,9 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout Code
       uses: actions/checkout@v2
-      with:
-          fetch-depth: 0
+
+    - name: Fetch History
+      run: git fetch --prune --unshallow
 
     - name: Clone iZero
       uses: actions/checkout@v2
