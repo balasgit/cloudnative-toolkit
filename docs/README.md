@@ -56,7 +56,9 @@ One of the features of the IBM Cloud Catalog is support for private catalog
  
 - Clone this repository to the Cloud Shell or you local workstation
 - Run the `offering.sh` scripts passing in the API Key and the name of the
- Catalog that you created 
+ Catalog that you created
+- If you are not running this from the [Cloud Shell](https://www.ibm.com/cloud/cloud-shell) you will need to install `jq` into you command line environment [jq downloads](https://stedolan.github.io/jq/download/)  
+ 
  ```bash
 git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
 ./offering.sh {API_KEY} "Team Catalog"
