@@ -35,10 +35,6 @@ jobs:
     # Runs a single command using the runners shell
     - name: Build Source
       run: |
-        ls -al
-        cd clone
-        ls -al
-        cd ..
         ./scripts/build.sh
 
       # Runs a single command using the runners shell
