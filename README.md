@@ -17,7 +17,7 @@ You can find out more information about the toolkit and the iteration zero
 - [Toolkit Iteration Zero Terraform](https://github.com/ibm-garage-cloud/ibm-garage-iteration-zero)
 
 Follow the instructions below to install these common cloud native tools
- into manager cluster on IBM Cloud. This can be either OpenShift or
+ into a managed cluster on IBM Cloud. This can be either OpenShift or
   Kubernetes
   
 ### Prerequisites
