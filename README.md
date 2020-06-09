@@ -59,7 +59,7 @@ One of the features of the IBM Cloud Catalog is support for private catalog
  Catalog that you created 
  ```bash
 git clone https://github.com/ibm-garage-cloud/cloudnative-toolkit
-../offering.sh {API_KEY} "Team Catalog"
+./offering.sh {API_KEY} "Team Catalog"
 ```
 
 ## Install Toolkit into Cluster using Private Catalog Tile
