@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 echo 'Publish Release of Tile'
 
+set -e
+
 npm i
 
 git add .
