@@ -26,9 +26,8 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout Code
       uses: actions/checkout@v2
-
-    - name: Fetch History
-      run: git fetch --prune --unshallow
+      with:
+       fetch-depth: 0
 
     - name: Clone iZero
       uses: actions/checkout@v2
@@ -44,3 +43,5 @@ jobs:
       # Runs a single command using the runners shell
     - name: Publish
       run: ./scripts/publish.sh
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
