@@ -13,7 +13,7 @@ echo "This will create a CNCF DevOps Cloud Native Toolkit Tile in an existing Ca
 # the API_KEY and Catalog Name are required to run this script
 API_KEY=$1
 CATALOG_NAME=$2
-VERSION=1.0.13
+VERSION=1.0.14
 
 # input validation
 if [ -z "${API_KEY}" ]; then
