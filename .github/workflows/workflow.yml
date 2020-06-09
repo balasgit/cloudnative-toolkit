@@ -26,6 +26,12 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: Clone iZero
+      uses: actions/checkout@v2
+      with:
+        name: ibm-garage-cloud/ibm-garage-iteration-zero.git
+        path: clone
+
     # Runs a single command using the runners shell
     - name: Build Source
       run: ./scripts/build.sh
