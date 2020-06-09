@@ -34,7 +34,10 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build Source
-      run: ./scripts/build.sh
+      run: |
+        ls -al
+        ls -al clone
+        ./scripts/build.sh
 
       # Runs a single command using the runners shell
     - name: Publish
