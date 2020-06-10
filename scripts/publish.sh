@@ -6,6 +6,6 @@ set -e
 npm i -g release-it
 
 # Release the Version
-release-it --ci minor --verbose -VV
+release-it --ci --no-npm minor --verbose -VV
 
 echo 'Release complete .......'
