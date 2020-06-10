@@ -37,8 +37,7 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build Source
-      run: |
-        ./scripts/build.sh
+      run: ./scripts/build.sh
 
     - name: Setup node
       uses: actions/setup-node@v2-beta
@@ -50,6 +49,6 @@ jobs:
       run: npm i -g release-it
 
     - name: release
-      run: release-it --ci minor
+      run: release-it --ci --no-npm minor
       env:
         GITHUB_TOKEN: ${{ github.token }}
