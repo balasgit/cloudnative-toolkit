@@ -47,6 +47,8 @@ jobs:
       
       # Runs a single command using the runners shell
     - name: Publish
-      run: ./scripts/publish.sh
+      run: |
+        npm i -g release-it
+        release-it --ci minor
       env:
         GITHUB_TOKEN: ${{ github.token }}
