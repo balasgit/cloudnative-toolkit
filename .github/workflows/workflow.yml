@@ -46,9 +46,10 @@ jobs:
         node-version: '12'
       
       # Runs a single command using the runners shell
-    - name: Publish
-      run: |
-        npm i -g release-it
-        release-it --ci minor
+    - name: Install release-it
+      run: npm i -g release-it
+
+    - name: release
+      run: release-it --ci minor
       env:
         GITHUB_TOKEN: ${{ github.token }}
