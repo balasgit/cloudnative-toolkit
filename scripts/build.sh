@@ -4,13 +4,13 @@ set -e
 
 echo 'Building new version of Tile from Iteration Zero Terraform Modules'
 
-export GIT_REPO="git@github.com:ibm-garage-cloud/ibm-garage-iteration-zero.git"
-export BRANCH="master"
+#export GIT_REPO="git@github.com:ibm-garage-cloud/ibm-garage-iteration-zero.git"
+#export BRANCH="master"
 
 export WORK_DIR="clone"
 
-rm -rfd ${WORK_DIR}
-git clone -b ${BRANCH} ${GIT_REPO}  ${WORK_DIR}
+#rm -rfd ${WORK_DIR}
+#git clone -b ${BRANCH} ${GIT_REPO}  ${WORK_DIR}
 
 if [[ "${BRANCH}" != "master" ]]; then
     PRE_RELEASE="--preRelease=${BRANCH}"
