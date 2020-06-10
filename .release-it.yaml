@@ -9,4 +9,4 @@ git:
   addUntrackedFiles: true
 hooks:
   "after:bump": 
-    - "cat scripts/master.sh | sed "s/VERSION=/VERSION=${version}/g" > ./offering.sh; chmod +x ./offering.sh; cp scripts/master.json ./offering.json"
+    - "cat scripts/master.sh | sed \"s/VERSION=/VERSION=${version}/g\" > ./offering.sh; chmod +x ./offering.sh; cp scripts/master.json ./offering.json"
