@@ -6,6 +6,6 @@ set -e
 npm i -g release-it
 
 # Release the Version
-release-it --ci --no-npm minor --verbose -VV
+release-it --ci --no-npm minor --verbose -VV -c .release-it.yaml
 
 echo 'Release complete .......'

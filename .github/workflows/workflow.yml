@@ -55,6 +55,6 @@ jobs:
       run: npm i -g release-it
 
     - name: Publish
-      run: release-it --ci --no-npm minor --verbose -VV
+      run: release-it --ci --no-npm minor --verbose -VV -c .release-it.yaml
       env:
         GITHUB_TOKEN: ${{ github.token }}
