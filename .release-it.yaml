@@ -5,7 +5,7 @@ npm:
   ignoreVersion: true
 git:
   requireCleanWorkingDir: false
-  tagName: "v${version}"
+  tagName: "${version}"
   addUntrackedFiles: true
 hooks:
   "before:init":
