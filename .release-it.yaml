@@ -8,5 +8,7 @@ git:
   tagName: "v${version}"
   addUntrackedFiles: true
 hooks:
+  "before:init":
+    - "git config --global user.email \"pipeline@github.com\"; git config --global user.name \"Github pipeline\""
   "after:bump": 
     - "cat scripts/master.sh | sed \"s/VERSION=/VERSION=${version}/g\" > ./offering.sh; chmod +x ./offering.sh; cp scripts/master.json ./offering.json"
