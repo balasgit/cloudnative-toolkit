@@ -17,7 +17,7 @@
         {
           "version": "#VERSION",
           "catalog_id": "#CATALOG_ID",
-          "repo_url": "https://github.com/ibm-garage-cloud/cloudnative-toolkit/archive",
+          "repo_url": "https://github.com/ibm-garage-cloud/cloudnative-toolkit/",
           "tgz_url": "https://github.com/ibm-garage-cloud/cloudnative-toolkit/archive/#VERSION.tar.gz",
           "configuration": [
             {

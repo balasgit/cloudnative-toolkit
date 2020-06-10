@@ -4,14 +4,14 @@ name: CI For Cloud-Native Toolkit Private Catalog
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
-on:
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+#on:
+#  push:
+#    branches: [ master ]
+#  pull_request:
+#    branches: [ master ]
 
-  repository_dispatch:
-    types: [opened, deleted]
+#  repository_dispatch:
+#    types: [opened, deleted]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
