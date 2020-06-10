@@ -19,10 +19,16 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    container: node:12-stretch
+    container: ubuntu:latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    - name: Setup
+      run: |
+        apt-get update
+        apt-get install -y git
+        apt-get clean
+      
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - name: Checkout Code
       uses: actions/checkout@v2
@@ -37,11 +43,18 @@ jobs:
 
     # Runs a single command using the runners shell
     - name: Build Source
-      run: |
-        ./scripts/build.sh
+      run: ./scripts/build.sh
 
+    - name: Setup node
+      uses: actions/setup-node@v2-beta
+      with:
+        node-version: '12'
+      
       # Runs a single command using the runners shell
+    - name: Install release-it
+      run: npm i -g release-it
+
     - name: Publish
-      run: ./scripts/publish.sh
+      run: release-it --ci --no-npm minor --verbose -VV -c .release-it.yaml
       env:
         GITHUB_TOKEN: ${{ github.token }}
